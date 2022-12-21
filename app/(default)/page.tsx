@@ -1,7 +1,11 @@
 import {SVGProps} from "react"
 import Link from 'next/link'
+import Image from "next/image";
 
 import PointsCard from "./PointsCard"
+
+import communityImage from './community.jpg'
+import friendsImage from './friends.jpg'
 
 const points = 1000
 const friendsRank = 1
@@ -9,12 +13,12 @@ const communityRank = 1
 const games = [
   {
     name: 'Community leaderboard',
-    image: '/community.jpg',
+    image: communityImage,
     link: '/community'
   },
   {
     name: 'Friend leaderboard',
-    image: '/friends.jpg',
+    image: friendsImage,
     link: '/friends'
   }
 ]
@@ -61,7 +65,8 @@ export default function LoginPage() {
                 key={idx.toString()}
                 className="carousel-item relative w-64 rounded-xl overflow-hidden drop-shadow-lg"
               >
-                <img src={game.image} className="absolute inset-0 object-fill max-w-none h-full w-full"/>
+                <Image src={game.image} className="absolute inset-0 object-fill max-w-none h-full w-full"
+                       alt={game.name}/>
 
                 <Link href={game.link} className="absolute inset-0 p-3">
                   <h2 className="text-white">
