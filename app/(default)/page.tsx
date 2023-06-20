@@ -91,7 +91,7 @@ export default function LoginPage() {
 }
 
 
-export function MaterialSymbolsSearch(props: SVGProps<SVGSVGElement>) {
+function MaterialSymbolsSearch(props: SVGProps<SVGSVGElement>) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}>
       <path fill="#888888"
@@ -100,7 +100,7 @@ export function MaterialSymbolsSearch(props: SVGProps<SVGSVGElement>) {
   )
 }
 
-export function MaterialSymbolsWallet(props: SVGProps<SVGSVGElement>) {
+function MaterialSymbolsWallet(props: SVGProps<SVGSVGElement>) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}>
       <path fill="#888888"
